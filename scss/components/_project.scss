@@ -2,31 +2,47 @@
 
 .group {
   & + & {
-    margin-top: 4rem;
+    margin-top: 5rem;
+
+    @include md {
+      margin-top: 7rem;
+    }
   }
 
   &__head {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1rem;
+    row-gap: 0.35rem;
     align-items: baseline;
-    gap: 0.25rem 1rem;
-    margin-bottom: 1.25rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--line);
+    margin-bottom: 2rem;
+
+    @include md {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__index {
+    grid-row: span 2;
+    font-family: $font-display;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--pop);
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: clamp(1.6rem, 3vw, 2rem);
   }
 
   &__sub {
+    max-width: 36rem;
     color: var(--muted);
   }
 }
 
 .projects {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.75rem;
 
   @include md {
     grid-template-columns: repeat(2, 1fr);
