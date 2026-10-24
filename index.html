@@ -50,10 +50,15 @@
       <section id="work" class="section container">
         <div class="section__head">
           <h2 class="section__title">Selected work</h2>
-          <p class="section__sub">Bootcamp projects first, then the apps I built for my own clinic.</p>
+          <p class="section__sub">Grouped by where they came from.</p>
         </div>
 
-        <div class="projects">
+        <div class="group" id="bootcamp">
+          <div class="group__head">
+            <h3 class="group__title">Bootcamp</h3>
+            <p class="group__sub">What I built while learning.</p>
+          </div>
+          <div class="projects">
           <article class="project reveal">
             <div class="project__visual">
               <div class="browser">
@@ -62,8 +67,8 @@
               </div>
             </div>
             <div class="project__body">
-              <p class="project__eyebrow">Bootcamp · RevoU</p>
-              <h3 class="project__title">Expense &amp; Budget Visualizer</h3>
+              <p class="project__eyebrow">RevoU · 5-day bootcamp</p>
+              <h4 class="project__title">Expense &amp; Budget Visualizer</h4>
               <p class="project__desc">
                 Tracks daily spending and shows it as a pie chart by category. Data stays in local storage, and it has sorting, dark mode and a highlight for large expenses. Built in five days with no framework.
               </p>
@@ -74,7 +79,7 @@
               </div>
             </div>
           </article>
-          <article class="project reveal">
+          <article class="project project--warm reveal">
             <div class="project__visual">
               <div class="browser">
                 <div class="browser__bar"><i></i><i></i><i></i></div>
@@ -82,15 +87,24 @@
               </div>
             </div>
             <div class="project__body">
-              <p class="project__eyebrow">Bootcamp · KodingUp</p>
-              <h3 class="project__title">To-Do List</h3>
+              <p class="project__eyebrow">KodingUp · Frontend bootcamp</p>
+              <h4 class="project__title">To-Do List</h4>
               <p class="project__desc">
                 I first built it in pure HTML and SCSS with no JavaScript. Then I rebuilt it with ES6 classes, giving the input, filter tabs, task list and stats each their own component.
               </p>
               <ul class="tags"><li>JavaScript</li><li>ES Modules</li><li>SCSS</li></ul>
             </div>
           </article>
-          <article class="project project--featured reveal">
+          </div>
+        </div>
+
+        <div class="group" id="clinic">
+          <div class="group__head">
+            <h3 class="group__title">Clinic</h3>
+            <p class="group__sub">Tools and sites I built for Baruga Medical Center, the dental clinic I run.</p>
+          </div>
+          <div class="projects">
+          <article class="project project--featured project--warm reveal">
             <div class="project__visual">
               <div class="browser">
                 <div class="browser__bar"><i></i><i></i><i></i></div>
@@ -98,8 +112,8 @@
               </div>
             </div>
             <div class="project__body">
-              <p class="project__eyebrow">In daily use · Baruga Medical Center</p>
-              <h3 class="project__title">Patient Tracker</h3>
+              <p class="project__eyebrow">In daily use</p>
+              <h4 class="project__title">Patient Tracker</h4>
               <p class="project__desc">
                 Follows every implant patient through an 11-step treatment plan. Staff sign in with roles, log dates and notes, and get a dashboard of caseload and progress. It also has inventory with low-stock alerts and one-tap WhatsApp material requests.
               </p>
@@ -111,11 +125,31 @@
           </article>
           <article class="project reveal">
             <div class="project__visual">
+              <div class="browser">
+                <div class="browser__bar"><i></i><i></i><i></i></div>
+                <img src="assets/projects/baruga-website.webp" alt="Baruga Medical Center homepage with a 20% braces promo card" loading="lazy" style="object-position: top" />
+              </div>
+            </div>
+            <div class="project__body">
+              <p class="project__eyebrow">Clinic website</p>
+              <h4 class="project__title">Baruga Medical Center</h4>
+              <p class="project__desc">
+                The clinic's public site, in Indonesian and English. Pages are pre-rendered for search engines, and visitors can book a consultation that lands straight in WhatsApp.
+              </p>
+              <ul class="tags"><li>React</li><li>React Router</li><li>Vite</li><li>SEO pre-rendering</li></ul>
+              <div class="project__links">
+                <a href="https://barugamedicalcenter.com/" target="_blank" rel="noopener">Live site ↗</a>
+                <a href="https://github.com/garlan730/baruga-website" target="_blank" rel="noopener">Code ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="project project--warm reveal">
+            <div class="project__visual">
               <div class="phone"><img src="assets/projects/braces-promo.webp" alt="Mobile landing page for a 20% braces promotion" loading="lazy" /></div>
             </div>
             <div class="project__body">
               <p class="project__eyebrow">Live campaign</p>
-              <h3 class="project__title">Braces Promo Landing Page</h3>
+              <h4 class="project__title">Braces Promo Landing Page</h4>
               <p class="project__desc">
                 A mobile-first page for an Instagram campaign. Visitors pick a time slot, which is locked via Google Apps Script and added to the calendar, then WhatsApp opens with the booking filled in.
               </p>
@@ -125,22 +159,15 @@
               </div>
             </div>
           </article>
-          <article class="project reveal">
-            <div class="project__visual">
-              <div class="browser">
-                <div class="browser__bar"><i></i><i></i><i></i></div>
-                <img src="assets/projects/implant-planner.webp" alt="Implant Planner report for a fictional sample patient" loading="lazy" style="object-position: top" />
-              </div>
-            </div>
-            <div class="project__body">
-              <p class="project__eyebrow">AI tool</p>
-              <h3 class="project__title">Implant Planner</h3>
-              <p class="project__desc">
-                Upload dental photos and X-rays to get a structured treatment plan with steps, risks and a plain-language summary for the patient. The patient's name never leaves the browser.
-              </p>
-              <ul class="tags"><li>React</li><li>Express</li><li>Gemini / Claude API</li></ul>
-            </div>
-          </article>
+          </div>
+        </div>
+
+        <div class="group" id="small">
+          <div class="group__head">
+            <h3 class="group__title">Small projects</h3>
+            <p class="group__sub">Things I made to scratch my own itch.</p>
+          </div>
+          <div class="projects">
           <article class="project project--featured project--reverse reveal">
             <div class="project__visual">
               <div class="browser">
@@ -150,7 +177,7 @@
             </div>
             <div class="project__body">
               <p class="project__eyebrow">Browser extension</p>
-              <h3 class="project__title">Reel Finder</h3>
+              <h4 class="project__title">Reel Finder</h4>
               <p class="project__desc">
                 Finds where an Instagram reel sits in its creator's grid and shows what they posted next, which is usually "Part 2". It reads the upload date from the reel's link. No server is involved.
               </p>
@@ -160,6 +187,7 @@
               </div>
             </div>
           </article>
+          </div>
         </div>
       </section>
 

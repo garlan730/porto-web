@@ -1,5 +1,29 @@
 @use '../abstracts' as *;
 
+.group {
+  & + & {
+    margin-top: 4rem;
+  }
+
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  &__title {
+    font-size: 1.5rem;
+  }
+
+  &__sub {
+    color: var(--muted);
+  }
+}
+
 .projects {
   display: grid;
   gap: 1.25rem;
@@ -62,11 +86,8 @@
     background: var(--accent-soft);
   }
 
-  &:nth-child(4n + 2),
-  &:nth-child(4n + 3) {
-    .project__visual {
-      background: var(--pop-soft);
-    }
+  &--warm &__visual {
+    background: var(--pop-soft);
   }
 
   &__body {

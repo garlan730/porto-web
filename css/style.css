@@ -84,7 +84,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Fraunces", Georgia, serif;
   font-weight: 600;
   line-height: 1.1;
@@ -281,6 +282,25 @@ em {
   margin-top: 2.25rem;
 }
 
+.group + .group {
+  margin-top: 4rem;
+}
+.group__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+.group__title {
+  font-size: 1.5rem;
+}
+.group__sub {
+  color: var(--muted);
+}
+
 .projects {
   display: grid;
   gap: 1.25rem;
@@ -335,7 +355,7 @@ em {
   overflow: hidden;
   background: var(--accent-soft);
 }
-.project:nth-child(4n+2) .project__visual, .project:nth-child(4n+3) .project__visual {
+.project--warm .project__visual {
   background: var(--pop-soft);
 }
 .project__body {
