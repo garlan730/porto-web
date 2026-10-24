@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andi Garlan | Frontend Developer</title>
+    <meta
+      name="description"
+      content="Andi Garlan, a frontend developer in Jakarta. I build React and JavaScript apps that real teams use every day."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container nav__inner">
+        <a href="#top" class="nav__logo">AG<span>.</span></a>
+        <nav class="nav__links" aria-label="Main">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ====== HERO ====== -->
+      <section class="hero container">
+        <p class="pill"><span class="pill__dot"></span>Open to frontend roles · Jakarta</p>
+        <h1 class="hero__title">
+          Hi, I'm Andi.<br />
+          I build web apps that <em>people actually use.</em>
+        </h1>
+        <p class="hero__lead">
+          I spent years in research and consulting, then started running a dental clinic. These
+          days I build the software that clinic runs on, using React, JavaScript and SCSS.
+        </p>
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--primary">See my work</a>
+          <a href="assets/Andi-Garlan-Resume.pdf" class="btn btn--ghost" download>Download resume</a>
+        </div>
+      </section>
+
+      <!-- ====== WORK ====== -->
+      <section id="work" class="section container">
+        <div class="section__head">
+          <h2 class="section__title">Selected work</h2>
+          <p class="section__sub">Bootcamp projects first, then the apps I built for my own clinic.</p>
+        </div>
+
+        <div class="projects">
+          <article class="project reveal">
+            <div class="project__visual">
+              <div class="browser">
+                <div class="browser__bar"><i></i><i></i><i></i></div>
+                <img src="assets/projects/expense-visualizer.webp" alt="Expense Visualizer showing a transaction list and a spending pie chart" loading="lazy" style="object-position: top" />
+              </div>
+            </div>
+            <div class="project__body">
+              <p class="project__eyebrow">Bootcamp · RevoU</p>
+              <h3 class="project__title">Expense &amp; Budget Visualizer</h3>
+              <p class="project__desc">
+                Tracks daily spending and shows it as a pie chart by category. Data stays in local storage, and it has sorting, dark mode and a highlight for large expenses. Built in five days with no framework.
+              </p>
+              <ul class="tags"><li>JavaScript</li><li>Chart.js</li><li>Local Storage</li></ul>
+              <div class="project__links">
+                <a href="https://garlan730.github.io/CodingCamp-6July26-AndiGarlanRahmatNurfanka/" target="_blank" rel="noopener">Live demo ↗</a>
+                <a href="https://github.com/garlan730/CodingCamp-6July26-AndiGarlanRahmatNurfanka" target="_blank" rel="noopener">Code ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="project__visual">
+              <div class="browser">
+                <div class="browser__bar"><i></i><i></i><i></i></div>
+                <img src="assets/projects/todo-list.webp" alt="To-do app with task, active and done counters and a task list" loading="lazy" style="object-position: top" />
+              </div>
+            </div>
+            <div class="project__body">
+              <p class="project__eyebrow">Bootcamp · KodingUp</p>
+              <h3 class="project__title">To-Do List</h3>
+              <p class="project__desc">
+                I first built it in pure HTML and SCSS with no JavaScript. Then I rebuilt it with ES6 classes, giving the input, filter tabs, task list and stats each their own component.
+              </p>
+              <ul class="tags"><li>JavaScript</li><li>ES Modules</li><li>SCSS</li></ul>
+            </div>
+          </article>
+          <article class="project project--featured reveal">
+            <div class="project__visual">
+              <div class="browser">
+                <div class="browser__bar"><i></i><i></i><i></i></div>
+                <img src="assets/projects/patient-tracker.webp" alt="Patient Tracker dashboard with KPIs and charts, shown with demo data" loading="lazy" style="object-position: top left" />
+              </div>
+            </div>
+            <div class="project__body">
+              <p class="project__eyebrow">In daily use · Baruga Medical Center</p>
+              <h3 class="project__title">Patient Tracker</h3>
+              <p class="project__desc">
+                Follows every implant patient through an 11-step treatment plan. Staff sign in with roles, log dates and notes, and get a dashboard of caseload and progress. It also has inventory with low-stock alerts and one-tap WhatsApp material requests.
+              </p>
+              <ul class="tags"><li>React</li><li>React Router</li><li>Tailwind CSS</li><li>Firebase</li><li>Recharts</li></ul>
+              <div class="project__links">
+                <a href="https://github.com/garlan730/patient-tracker" target="_blank" rel="noopener">Code ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="project__visual">
+              <div class="phone"><img src="assets/projects/braces-promo.webp" alt="Mobile landing page for a 20% braces promotion" loading="lazy" /></div>
+            </div>
+            <div class="project__body">
+              <p class="project__eyebrow">Live campaign</p>
+              <h3 class="project__title">Braces Promo Landing Page</h3>
+              <p class="project__desc">
+                A mobile-first page for an Instagram campaign. Visitors pick a time slot, which is locked via Google Apps Script and added to the calendar, then WhatsApp opens with the booking filled in.
+              </p>
+              <ul class="tags"><li>React</li><li>Vite</li><li>Apps Script</li><li>GitHub Actions</li></ul>
+              <div class="project__links">
+                <a href="https://promo.barugamedicalcenter.com/" target="_blank" rel="noopener">Live site ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="project__visual">
+              <div class="browser">
+                <div class="browser__bar"><i></i><i></i><i></i></div>
+                <img src="assets/projects/implant-planner.webp" alt="Implant Planner report for a fictional sample patient" loading="lazy" style="object-position: top" />
+              </div>
+            </div>
+            <div class="project__body">
+              <p class="project__eyebrow">AI tool</p>
+              <h3 class="project__title">Implant Planner</h3>
+              <p class="project__desc">
+                Upload dental photos and X-rays to get a structured treatment plan with steps, risks and a plain-language summary for the patient. The patient's name never leaves the browser.
+              </p>
+              <ul class="tags"><li>React</li><li>Express</li><li>Gemini / Claude API</li></ul>
+            </div>
+          </article>
+          <article class="project project--featured project--reverse reveal">
+            <div class="project__visual">
+              <div class="browser">
+                <div class="browser__bar"><i></i><i></i><i></i></div>
+                <img src="assets/projects/reel-finder.webp" alt="Reel Finder panel next to a profile grid, showing the reel position and the next post" loading="lazy" style="object-position: top left" />
+              </div>
+            </div>
+            <div class="project__body">
+              <p class="project__eyebrow">Browser extension</p>
+              <h3 class="project__title">Reel Finder</h3>
+              <p class="project__desc">
+                Finds where an Instagram reel sits in its creator's grid and shows what they posted next, which is usually "Part 2". It reads the upload date from the reel's link. No server is involved.
+              </p>
+              <ul class="tags"><li>JavaScript</li><li>Chrome Extension</li><li>DOM</li></ul>
+              <div class="project__links">
+                <a href="https://github.com/garlan730/ig-reel-finder" target="_blank" rel="noopener">Code ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ====== ABOUT ====== -->
+      <section id="about" class="section container about">
+        <div class="about__text reveal">
+          <h2 class="section__title">From spreadsheets to screens</h2>
+          <p>
+            I studied business at BINUS, then did transfer pricing at Deloitte and quantitative
+            research at Kantar. I spent those years turning messy data into clear answers.
+          </p>
+          <p>
+            Running my own clinic showed me how much time bad tools waste, so I learned to build
+            better ones. In 2026 I did three bootcamps and started shipping apps my team uses
+            every day.
+          </p>
+          <p class="about__skills">
+            <strong>I work with</strong> HTML, CSS, SCSS, JavaScript, React, Tailwind, Bootstrap,
+            Vite, Git, Firebase and Figma. I also know some PHP/Laravel.
+          </p>
+        </div>
+
+        <ol class="timeline reveal">
+          <li><span>2026</span>Frontend bootcamps: KodingUp, ScreenAsia, RevoU</li>
+          <li><span>2023</span>Quantitative Research, Kantar</li>
+          <li><span>2022</span>Director, Baruga Medical Center</li>
+          <li><span>2020</span>Transfer Pricing, Deloitte</li>
+          <li><span>2018</span>B.Econ, BINUS University</li>
+        </ol>
+      </section>
+
+      <!-- ====== CONTACT ====== -->
+      <section id="contact" class="section container contact reveal">
+        <h2 class="contact__title">Let's build something useful.</h2>
+        <p class="contact__sub">I'm looking for my first frontend role. My inbox is open.</p>
+        <button class="contact__email" type="button" data-email="garlan730@gmail.com">
+          garlan730@gmail.com
+          <span class="contact__hint" aria-live="polite">Click to copy</span>
+        </button>
+        <p class="contact__phone"><a href="tel:+6287840117044">+62 878 4011 7044</a></p>
+        <ul class="contact__links">
+          <li><a href="https://github.com/garlan730" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/andi-garlan/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://wa.me/6287840117044" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="assets/Andi-Garlan-Resume.pdf" download>Resume</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>© <span id="year">2026</span> Andi Garlan · Built by hand with HTML, SCSS and JavaScript</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

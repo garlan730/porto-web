@@ -1,0 +1,112 @@
+@use '../abstracts' as *;
+
+.projects {
+  display: grid;
+  gap: 1.25rem;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: $radius;
+  transition:
+    transform 0.3s $ease,
+    box-shadow 0.3s $ease,
+    opacity 0.7s $ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1.25rem 2.5rem -1.25rem rgb(0 0 0 / 0.25);
+  }
+
+  &--featured {
+    @include md {
+      grid-column: 1 / -1;
+      flex-direction: row;
+
+      .project__visual {
+        flex: 1.3;
+        height: auto;
+        min-height: 22rem;
+        place-items: end center;
+        padding: 2.5rem 2.5rem 0;
+      }
+
+      .project__body {
+        flex: 1;
+        justify-content: center;
+        padding: 2.5rem;
+      }
+    }
+  }
+
+  &--reverse {
+    @include md {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__visual {
+    display: grid;
+    place-items: start center;
+    height: 17rem;
+    padding: 2rem 2rem 0;
+    overflow: hidden;
+    background: var(--accent-soft);
+  }
+
+  &:nth-child(4n + 2),
+  &:nth-child(4n + 3) {
+    .project__visual {
+      background: var(--pop-soft);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    flex: 1;
+  }
+
+  &__eyebrow {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--pop);
+  }
+
+  &__title {
+    font-size: 1.6rem;
+  }
+
+  &__desc {
+    color: var(--muted);
+  }
+
+  &__links {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+    font-weight: 500;
+
+    a {
+      border-bottom: 1px solid var(--line);
+      transition: border-color 0.2s;
+
+      &:hover {
+        border-color: var(--ink);
+      }
+    }
+  }
+}

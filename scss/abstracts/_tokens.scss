@@ -1,0 +1,39 @@
+// ====== DESIGN TOKENS ======
+
+$font-display: 'Fraunces', Georgia, serif;
+$font-body: 'Inter', system-ui, sans-serif;
+
+$container: 68rem;
+$radius: 1rem;
+$ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+$bp-md: 48rem;
+$bp-lg: 64rem;
+
+:root {
+  --bg: #f6f3ec;
+  --surface: #ffffff;
+  --ink: #1c1b18;
+  --muted: #6b675e;
+  --line: #e4ded1;
+  --accent: #2f6b52;
+  --accent-soft: #dcebe2;
+  --pop: #e0703c;
+  --pop-soft: #fbe3d6;
+  --mock: #ece7dc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141412;
+    --surface: #1d1d1a;
+    --ink: #f1eee6;
+    --muted: #a19c90;
+    --line: #2e2d29;
+    --accent: #7cc4a1;
+    --accent-soft: #23362c;
+    --pop: #f0905f;
+    --pop-soft: #3a261c;
+    --mock: #2a2925;
+  }
+}

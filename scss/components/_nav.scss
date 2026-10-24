@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+
+  &.is-scrolled {
+    border-color: var(--line);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+  }
+
+  &__logo {
+    font-family: $font-display;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    span {
+      color: var(--pop);
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+
+    a {
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--ink);
+      }
+    }
+  }
+}

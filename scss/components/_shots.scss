@@ -1,0 +1,70 @@
+@use '../abstracts' as *;
+
+// Screenshot frames for the project cards: a browser window or a phone.
+// They sit at the bottom of the coloured panel and lift a little on hover.
+
+.browser {
+  width: 100%;
+  overflow: hidden;
+  background: var(--surface);
+  border-radius: 0.75rem 0.75rem 0 0;
+  box-shadow: 0 -0.5rem 2.5rem -1rem rgb(0 0 0 / 0.35);
+  transform: translateY(0.75rem);
+  transition: transform 0.5s $ease;
+
+  &__bar {
+    display: flex;
+    gap: 0.35rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--mock);
+
+    i {
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      background: var(--line);
+
+      &:first-child {
+        background: #ff5f57;
+      }
+      &:nth-child(2) {
+        background: #febc2e;
+      }
+      &:nth-child(3) {
+        background: #28c840;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.phone {
+  align-self: end;
+  width: 11rem;
+  height: 15rem;
+  overflow: hidden;
+  padding: 0.5rem 0.5rem 0;
+  background: #111;
+  border-radius: 1.75rem 1.75rem 0 0;
+  box-shadow: 0 -0.5rem 2.5rem -1rem rgb(0 0 0 / 0.45);
+  transform: translateY(0.75rem);
+  transition: transform 0.5s $ease;
+
+  img {
+    width: 100%;
+    border-radius: 1.3rem 1.3rem 0 0;
+  }
+}
+
+.project:hover {
+  .browser,
+  .phone {
+    transform: translateY(0);
+  }
+}
