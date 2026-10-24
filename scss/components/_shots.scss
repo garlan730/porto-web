@@ -45,7 +45,7 @@
 }
 
 .phone {
-  align-self: end;
+  align-self: flex-end;
   width: 11rem;
   height: 15rem;
   overflow: hidden;
@@ -67,4 +67,42 @@
   .phone {
     transform: translateY(0);
   }
+}
+
+// Tool logos above each screenshot (beside it for the phone).
+
+.stack {
+  display: flex;
+  gap: 0.6rem;
+  flex: none;
+
+  &--side {
+    flex-direction: column;
+  }
+
+  li {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--surface);
+    box-shadow: 0 0.35rem 1rem -0.4rem rgb(0 0 0 / 0.3);
+    transition: transform 0.3s $ease;
+
+    img {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+
+  @for $i from 1 through 4 {
+    li:nth-child(#{$i}) {
+      transition-delay: $i * 0.04s;
+    }
+  }
+}
+
+.project:hover .stack li {
+  transform: translateY(-3px);
 }
