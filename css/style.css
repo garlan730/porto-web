@@ -375,6 +375,7 @@ em {
   background: var(--accent-soft);
 }
 .project__visual--phone {
+  padding-top: 1.5rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -457,8 +458,8 @@ em {
 
 .phone {
   align-self: flex-end;
-  width: 11rem;
-  height: 15rem;
+  width: 12rem;
+  height: 18.5rem;
   overflow: hidden;
   padding: 0.5rem 0.5rem 0;
   background: #111;
@@ -479,7 +480,7 @@ em {
 
 .stack {
   display: flex;
-  gap: 0.6rem;
+  gap: 0.75rem;
   flex: none;
 }
 .stack--side {
@@ -488,16 +489,16 @@ em {
 .stack li {
   display: grid;
   place-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   background: var(--surface);
   box-shadow: 0 0.35rem 1rem -0.4rem rgba(0, 0, 0, 0.3);
   transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .stack li img {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .stack li:nth-child(1) {
   transition-delay: 0.04s;
